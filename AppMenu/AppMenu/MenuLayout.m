@@ -15,8 +15,8 @@
     if (self = [super init])
     {
         self.itemSize = CGSizeMake(100, 100);
-        self.minimumInteritemSpacing = 50;
-        self.minimumLineSpacing = 100;
+        self.minimumInteritemSpacing = 60;
+        self.minimumLineSpacing = 80;
         self.scrollDirection = UICollectionViewScrollDirectionHorizontal;
         self.sectionInset = UIEdgeInsetsMake(50, 80, 100, 80);
     }

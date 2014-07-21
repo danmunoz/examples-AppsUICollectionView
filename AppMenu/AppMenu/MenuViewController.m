@@ -38,7 +38,7 @@
     MenuLayout *layout = [[MenuLayout alloc] init];
     self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
     [self.collectionView registerClass:[MenuIconCell class] forCellWithReuseIdentifier:@"iconCell"];
-    [self.collectionView setBackgroundColor:[UIColor clearColor]];
+    [self.collectionView setBackgroundColor:[UIColor whiteColor]];
     [self.collectionView setPagingEnabled:YES];
     [self.collectionView setDelegate:self];
     [self.collectionView setDataSource:self];
@@ -60,8 +60,8 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    
     MenuIconCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"iconCell" forIndexPath:indexPath];
+    cell.cellNumber.text = [NSString stringWithFormat:@"%d", indexPath.row];
     return cell;
 }
 

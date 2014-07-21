@@ -10,4 +10,7 @@
 
 @interface MenuIconCell : UICollectionViewCell
 
+@property (nonatomic, strong) UIButton *removeButton;
+@property (nonatomic, strong) UILabel *cellNumber;
+
 @end
